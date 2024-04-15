@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: gardeniot
+    ports:
+    - "5432:5432"
+    volumes:
+    - volume_data:/var/lib/postgres
+
+volumes:
+  volume_data:
